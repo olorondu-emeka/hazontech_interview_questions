@@ -2,10 +2,10 @@ function alphabetSequence(inputString) {
   let formattedString = inputString.toLowerCase();
 
   // an object of alphabets and their corresponding ASCII codes
-  let alphabetArray = {};
+  let alphabetObject = {};
   for (let i = 97; i <= 122; i++) {
     let char = String.fromCharCode(i);
-    alphabetArray[char] = i;
+    alphabetObject[char] = i;
   }
 
   // start with the end of the string
@@ -23,7 +23,7 @@ function alphabetSequence(inputString) {
       finalString += tempArray.join('');
       console.log(finalString);
     } else {
-      let charCode = alphabetArray[formattedString[j]];
+      let charCode = alphabetObject[formattedString[j]];
       charCode += 1;
       finalString += formattedString
         .split('')
